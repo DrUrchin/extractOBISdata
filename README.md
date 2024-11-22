@@ -1,5 +1,5 @@
 # extractOBISdata
-*Author: Narimane Dorey : narimane.dorey_at_gmail.com. Initial idea from C. Clerc*
+*Author: Narimane Dorey : narimane.dorey_at_gmail.com from an initial idea from C. Clerc*
 
 ### R tool to extract data from the OBIS database (OBIS.org) and plot data on map
 
