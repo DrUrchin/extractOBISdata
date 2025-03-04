@@ -7,4 +7,6 @@ This script will retrieve data for 5 species of cold-water corals from the OBIS 
 
 
 
-![desmophyllum map](https://github.com/DrUrchin/extractOBISdata/blob/main/Desmophyllumpoints_map.png)
+![Desmophyllum map](https://github.com/DrUrchin/extractOBISdata/blob/main/Desmophyllumpoints_map.png)
+
+![Madrepora map](https://github.com/DrUrchin/extractOBISdata/blob/main/Madrepora_leaflet_interactivemap.png)
