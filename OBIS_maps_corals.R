@@ -5,13 +5,14 @@
 # 1. load the packages you need ####
 
 list.of.packages<-c("ggplot2","ggExtra",
-                    "sf",#"rgdal",
+                    "ggspatial", "tidyverse",
+                    "sf", # Support for simple features, a standardized way to encode spatial vector data. 
+                    #"rgdal", #removed from CRAN
                     "rworldmap", "maps", "mapproj",
                     "rnaturalearth","rnaturalearthdata",
-                    "ggspatial", "tidyverse",
-                    "raster",
-                    "robis", 
-                    "viridis")
+                    "raster", # Reading, writing, manipulating, analyzing and modeling of spatial data.
+                    "robis", # Client for the Ocean Biodiversity Information System
+                    "viridis") # Color palettes
 
 
 # Do we need to install new packages?
