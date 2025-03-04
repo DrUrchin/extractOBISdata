@@ -4,15 +4,15 @@
 
 # 1. load the packages you need ####
 
-list.of.packages<-c("ggplot2","ggExtra",
+list.of.packages<-c("ggplot2", #"ggExtra",
                     "ggspatial", "tidyverse",
-                    "sf", # Support for simple features, a standardized way to encode spatial vector data. 
-                    #"rgdal", #removed from CRAN
-                    "rworldmap", "maps", "mapproj",
-                    "rnaturalearth","rnaturalearthdata",
-                    "raster", # Reading, writing, manipulating, analyzing and modeling of spatial data.
-                    "robis", # Client for the Ocean Biodiversity Information System
-                    "viridis") # Color palettes
+                    "sf",               # Support for simple features, a standardized way to encode spatial vector data. 
+                    #"rgdal",           #removed from CRAN
+                    "rworldmap", "maps", "mapproj", # The legacy packages maptools, rgdal, and rgeos, underpinning the sp package, which was just loaded, will retire in October 2023.
+                    "rnaturalearth","rnaturalearthdata", # Support for Spatial objects (`sp`) will be deprecated in {rnaturalearth}
+                    "raster",           # Reading, writing, manipulating, analyzing and modeling of spatial data.
+                    "robis",           # Client for the Ocean Biodiversity Information System
+                    "viridis")         # Color palettes
 
 
 # Do we need to install new packages?
@@ -23,8 +23,6 @@ if(length(new.packages)) {
 
 # Install new packages when needed
 if(length(new.packages)) install.packages(new.packages)
-
-
 
 # Library() for all the packages
 lapply(list.of.packages, library, character.only=TRUE)
@@ -40,6 +38,7 @@ taxon4="Bathelia candida"
 taxon5="Enallopsammia profunda"
 
 # Load all occurences of your taxon from OBIS
+# ?robis::occurence #finds occurence by species
 # This is quite long (especially for Lophelia)
 dataset1=occurrence(taxon1)
 dataset2=occurrence(taxon2)
@@ -86,15 +85,20 @@ summary(dataset)
 # Remove the rows that do no have any depth
 # FiveCWC2=FiveCWC[!is.na(FiveCWC$Depth_m),]
 
+###### ____Online option #####
 # Remove the rows that do not have any depth
 FiveCWC2=dataset[!is.na(dataset$Depth_m),]
 
+# How many data were removed ?
+nrow(FiveCWC2)-nrow(dataset)
 summary(FiveCWC2)
 
 # Define number of observations for later use in graphs
 B=nrow(FiveCWC2)
+# How many observations are lower than 1000 m ?
 A=nrow(FiveCWC2[FiveCWC2$Depth_m>=1000,])/B*100
-A # 26 % of observations that are lower than 1000 m
+A 
+# 26 % of observations that are lower than 1000 m
 
 
 # 4. Make means of observations by 1° X 1 ° grid ####
