@@ -113,17 +113,17 @@ FiveCWC2$Coord=as.factor(paste(FiveCWC2$RoundLon,FiveCWC2$RoundLat))
 # Make one mean per species and 1° x 1° grid
 MeanDepth2=data.frame(
   aggregate(Depth_m~RoundLat*RoundLon*Genus,
-            data=FiveCWC2, mean),
+            data=FiveCWC2, mean),                #mean depth of occurences
   "sd"=aggregate(Depth_m~RoundLat*RoundLon*Genus,
-                 data=FiveCWC2, sd)$Depth_m,
+                 data=FiveCWC2, sd)$Depth_m,     #standard deviation of the depth
   "n"=aggregate(Depth_m~RoundLat*RoundLon*Genus,
-                data=FiveCWC2, length)$Depth_m)
+                data=FiveCWC2, length)$Depth_m)  # number of occurences in that 1° x 1° grid
 
 # rename lat and long for consistency with shp file
 names(MeanDepth2)[which(names(MeanDepth2) == 'RoundLon')] <- 'long'
 names(MeanDepth2)[which(names(MeanDepth2) == 'RoundLat')] <- 'lat'
 
-# import world map
+# import world map from ggplot2::map_data
 world_map <- map_data("world")
 
 
@@ -194,6 +194,7 @@ library(leaflet)
 G="Desmophyllum"          # Change genus accordingly
 G="Solenosmilia"
 G="Enallopsammia"
+G="Madrepora"
 
 # Create a color palette with handmade bins
 max(MeanDepth2[MeanDepth2$Genus==G,]$Depth_m)
@@ -242,7 +243,7 @@ m <- leaflet(MeanDepth2[MeanDepth2$Genus==G,]) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addCircleMarkers(~long, ~lat, 
     fillColor = ~mypalette(Depth_m), 
-    fillOpacity = 0.7, color="white", 
+    fillOpacity = 0.9, color="white", 
     radius=~n2/2, stroke=FALSE,
     label = mytext,
     labelOptions = labelOptions( style = 
