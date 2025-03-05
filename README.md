@@ -7,7 +7,7 @@ This script will retrieve data for 5 species of cold-water corals from the OBIS 
 
 [OBIS](https://obis.org) **: Ocean Biodiversity Information System** is a global open-access data and information clearing-house on marine biodiversity for science, conservation and sustainable development
 
-It uses the packages robis (https://github.com/iobis/robis), ggplot2 and leaflet.
+It uses the packages [robis](https://github.com/iobis/robis), ggplot2 and leaflet.
 
 
 ### Map of the occurence of Desmophyllum (Lophelia petrusa) registered in OBIS, with ggplot :
