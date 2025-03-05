@@ -3,7 +3,9 @@
 
 ## R tool to extract data from the OBIS database (OBIS.org) and plot data on a map
 
-This script will retrieve data for 5 species of cold-water corals from the OBIS database (*Lophelia pertusa*, *Madrepora oculata*, *Solenosmilia variabilis*, *Bathelia candida*, *Enallopsammia profunda*) and plot their occurence and average depth of discovery on a world map. It uses the packages [robis](https://github.com/iobis/robis), ggplot2 and leaflet.
+This script will retrieve data for 5 species of cold-water corals from the OBIS database (*Lophelia pertusa*, *Madrepora oculata*, *Solenosmilia variabilis*, *Bathelia candida*, *Enallopsammia profunda*) and plot their occurence and average depth of discovery on a world map. 
+
+It uses the packages [robis](https://github.com/iobis/robis), ggplot2 and leaflet.
 
 [OBIS](https://obis.org) **: Ocean Biodiversity Information System** is a global open-access data and information clearing-house on marine biodiversity for science, conservation and sustainable development.
 
