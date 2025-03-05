@@ -13,5 +13,6 @@ This script will retrieve data for 5 species of cold-water corals from the OBIS 
 ![Desmophyllum map](https://github.com/DrUrchin/extractOBISdata/blob/main/Desmophyllumpoints_map.png)
 
 ### Map of the occurence of Madrepora (M. oculata),registered in OBIS, with leaflet :
+Screenshot of the interactive html map produced.
 
 ![Madrepora map](https://github.com/DrUrchin/extractOBISdata/blob/main/Madrepora_leaflet_interactivemap.png)
