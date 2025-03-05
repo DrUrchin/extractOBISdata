@@ -11,11 +11,11 @@ It uses the packages [robis](https://github.com/iobis/robis), ggplot2 and leafle
 
 
 
-### Map of the occurence of Desmophyllum (Lophelia petrusa) registered in OBIS, with ggplot :
+### Map of the occurence of Desmophyllum (_Lophelia petrusa_) registered in OBIS, with ggplot :
 
 ![Desmophyllum map](https://github.com/DrUrchin/extractOBISdata/blob/main/Desmophyllumpoints_map.png)
 
-### Map of the occurence of Madrepora (M. oculata),registered in OBIS, with leaflet :
+### Map of the occurence of Madrepora (_M. oculata_),registered in OBIS, with leaflet :
 Screenshot of the interactive html map produced.
 
 ![Madrepora map](https://github.com/DrUrchin/extractOBISdata/blob/main/Madrepora_leaflet_interactivemap.png)
