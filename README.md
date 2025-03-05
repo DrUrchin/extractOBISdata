@@ -11,7 +11,7 @@ It uses the packages [robis](https://github.com/iobis/robis), ggplot2 and leafle
 
 
 
-### Map of the occurence of Desmophyllum (_Lophelia petrusa_) registered in OBIS, with ggplot :
+### Map of the occurence of Desmophyllum (_Lophelia pertusa_) registered in OBIS, with ggplot :
 
 ![Desmophyllum map](https://github.com/DrUrchin/extractOBISdata/blob/main/Desmophyllumpoints_map.png)
 
